@@ -29,7 +29,7 @@ name: "Create cluster using Minkube"
 on: [pull_request, push]
 
 jobs:
-  kind:
+  minikube-test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
