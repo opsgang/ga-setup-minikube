@@ -27,8 +27,11 @@ export class MinikubeConfig {
 }
 
 export function getMinikubeConfig(): MinikubeConfig {
-  const minikubeVersion: string = core.getInput(MinikubeVersionInput);
-  const k8sVersion: string = core.getInput(K8sVersionInput);
+  const minikubeVersion: string = core.getInput(MinikubeVersionInput, {
+    required: true
+  });
+  const k8sVersion: string = core.getInput(K8sVersionInput, {required: true});
+
   return new MinikubeConfig(minikubeVersion, k8sVersion);
 }
 
@@ -52,7 +55,7 @@ export async function downloadMinikube(version: string) {
   const binPath: string = '/home/runner/bin';
   await io.mkdirP(binPath);
   await exec.exec('chmod', ['+x', downloadPath]);
-  await io.mv(downloadPath, path.join(binPath, 'kind'));
+  await io.mv(downloadPath, path.join(binPath, 'minikube'));
 
   core.addPath(binPath);
 }

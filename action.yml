@@ -10,4 +10,4 @@ inputs:
     default: "1.15.0"
 runs:
   using: "node12"
-  main: "lib/main.js"
+  main: "lib/setup-minikube.js"
