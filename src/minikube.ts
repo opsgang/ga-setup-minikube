@@ -29,8 +29,6 @@ export class MinikubeConfig {
 export function getMinikubeConfig(): MinikubeConfig {
   const minikubeVersion: string = core.getInput(MinikubeVersionInput);
   const k8sVersion: string = core.getInput(K8sVersionInput);
-  console.log(core.getInput(K8sVersionInput));
-  console.log(`xxx${minikubeVersion}ooo`);
   return new MinikubeConfig(minikubeVersion, k8sVersion);
 }
 
