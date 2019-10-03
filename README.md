@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - uses: opsgang/ga-setup-minikube@v0.1.0
+    - uses: opsgang/ga-setup-minikube@v0.1.1
       with:
         minikube-version: 1.4.0
         k8s-version: 1.15.1
