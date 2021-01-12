@@ -53,3 +53,13 @@ jobs:
 
 * `minikube-version`: Version of the Minikube. The default is `1.4.0` .
 * `k8s-version`: The Kubernetes version to use. The default is `1.15.1`. 
+
+## Build from source
+
+[Ref](https://docs.github.com/en/free-pro-team@latest/actions/creating-actions/creating-a-javascript-action#commit-tag-and-push-your-action-to-github)
+
+```bash
+$ npm install
+$ npm i -g @vercel/ncc
+$ ncc build src/setup-minikube.ts --license LICENSE
+```
