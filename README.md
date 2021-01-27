@@ -25,7 +25,7 @@ and set the minimum requirement for Minikube. The rest is up to you.
 ## Example usage
 
 ```
-name: "Create cluster using Minkube"
+name: "Create cluster using Minikube"
 on: [pull_request, push]
 
 jobs:
