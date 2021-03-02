@@ -1,6 +1,6 @@
 {
   "name": "ga-setup-minikube",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Sets up Minikube for your Github Actions.",
   "main": "lib/setup-minikube.js",
@@ -28,7 +28,7 @@
     "semver": "^6.1.1"
   },
   "devDependencies": {
-    "@actions/io": "^1.0.0",
+    "@actions/io": "^1.0.2",
     "@types/jest": "^24.0.13",
     "@types/nock": "^10.0.3",
     "@types/node": "^12.0.4",
